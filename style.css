@@ -16,6 +16,17 @@ body {
     overflow: hidden;
 }
 
+/* Luz do jogador */
+#light {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, rgba(255,255,200,0.8) 0%, rgba(0,0,0,0.95) 80%);
+    border-radius: 50%;
+    pointer-events: none; /* permite clicar através da luz */
+    mix-blend-mode: lighten;
+}
+
 #player {
     position: absolute;
     width: 40px;
@@ -25,7 +36,7 @@ body {
     top: 280px;
     left: 380px;
     transition: top 0.1s, left 0.1s;
-    /* Para adicionar imagem futuramente */
+    /* Adicionar imagem futuramente */
     /* background-image: url('player.png'); */
 }
 
@@ -37,7 +48,7 @@ body {
     background-size: cover;
     top: 100px;
     left: 100px;
-    /* Para adicionar imagem futuramente */
+    /* Adicionar imagem futuramente */
     /* background-image: url('ghost.png'); */
 }
 

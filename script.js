@@ -1,5 +1,6 @@
 const player = document.getElementById('player');
 const ghost = document.getElementById('ghost');
+const light = document.getElementById('light');
 const gameOverDiv = document.getElementById('game-over');
 
 let playerPos = { x: 380, y: 280 };
@@ -33,6 +34,9 @@ function movePlayer(e) {
 function updatePlayer() {
     player.style.top = playerPos.y + 'px';
     player.style.left = playerPos.x + 'px';
+    // Atualiza posição da luz do jogador
+    light.style.top = (playerPos.y - 55) + 'px';  // centraliza a luz
+    light.style.left = (playerPos.x - 55) + 'px';
 }
 
 // Função do inimigo com perseguição baseada em visão
