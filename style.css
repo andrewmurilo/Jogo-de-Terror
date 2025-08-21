@@ -23,33 +23,42 @@ body {
     height: 150px;
     background: radial-gradient(circle, rgba(255,255,200,0.8) 0%, rgba(0,0,0,0.95) 80%);
     border-radius: 50%;
-    pointer-events: none; /* permite clicar através da luz */
+    pointer-events: none;
     mix-blend-mode: lighten;
 }
 
+/* Jogador com animação de sprite */
 #player {
     position: absolute;
     width: 40px;
     height: 40px;
-    background-color: #0f0;
-    background-size: cover;
+    background-image: url('player-sprite.png'); /* seu sprite do jogador */
+    background-size: 160px 40px; /* 4 frames */
+    animation: playerWalk 0.5s steps(4) infinite;
     top: 280px;
     left: 380px;
-    transition: top 0.1s, left 0.1s;
-    /* Adicionar imagem futuramente */
-    /* background-image: url('player.png'); */
 }
 
+/* Fantasma com animação de sprite */
 #ghost {
     position: absolute;
     width: 40px;
     height: 40px;
-    background-color: #f00;
-    background-size: cover;
+    background-image: url('ghost-sprite.png'); /* seu sprite do fantasma */
+    background-size: 120px 40px; /* 3 frames */
+    animation: ghostMove 0.6s steps(3) infinite;
     top: 100px;
     left: 100px;
-    /* Adicionar imagem futuramente */
-    /* background-image: url('ghost.png'); */
+}
+
+@keyframes playerWalk {
+    from { background-position: 0 0; }
+    to { background-position: -160px 0; }
+}
+
+@keyframes ghostMove {
+    from { background-position: 0 0; }
+    to { background-position: -120px 0; }
 }
 
 #game-over {
