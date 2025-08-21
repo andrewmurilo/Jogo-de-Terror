@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+}
+
+#game-container {
+    position: relative;
+    width: 800px;
+    height: 600px;
+    margin: 20px auto;
+    background-color: #111;
+    border: 2px solid #555;
+    overflow: hidden;
+}
+
+#player {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: #0f0;
+    background-size: cover;
+    top: 280px;
+    left: 380px;
+    transition: top 0.1s, left 0.1s;
+    /* Para adicionar imagem futuramente */
+    /* background-image: url('player.png'); */
+}
+
+#ghost {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: #f00;
+    background-size: cover;
+    top: 100px;
+    left: 100px;
+    /* Para adicionar imagem futuramente */
+    /* background-image: url('ghost.png'); */
+}
+
+#game-over {
+    display: none;
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#game-over button {
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
